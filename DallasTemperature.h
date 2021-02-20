@@ -75,6 +75,7 @@ public:
 
 	// initialise bus
 	void begin(void);
+	void begin(OneWire*);
 
 	// returns the number of devices found on the bus
 	uint8_t getDeviceCount(void);
