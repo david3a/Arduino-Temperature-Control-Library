@@ -128,6 +128,12 @@ void DallasTemperature::begin(void) {
 	}
 }
 
+// initialise the bus, convienence
+void DallasTemperature::begin(OneWire* _oneWire) {
+	setOneWire(_oneWire);
+	begin();
+}
+
 // returns the number of devices found on the bus
 uint8_t DallasTemperature::getDeviceCount(void) {
 	return devices;
